@@ -8,7 +8,8 @@ public abstract class Employee {
 	private String diaChi;
 	private int namKinhNghiem;
 	private double luongcoBan;
-      //constructor co tham so truyen vao
+
+	// constructor co tham so truyen vao
 	public Employee(String maSo, String ten, String cmnd, String diaChi, int namKinhNghiem, double luongcoBan) {
 		this.maSo = maSo;
 		this.ten = ten;
@@ -17,7 +18,8 @@ public abstract class Employee {
 		this.namKinhNghiem = namKinhNghiem;
 		this.luongcoBan = luongcoBan;
 	}
-	//constructor k truyen tham so = default trong java
+
+	// constructor k truyen tham so = default trong java
 	public Employee() {
 		this.maSo = "";
 		this.ten = "";
@@ -58,6 +60,16 @@ public abstract class Employee {
 		namKinhNghiem = sc.nextInt();
 		System.out.println("Nhap luong co ban: ");
 		luongcoBan = sc.nextDouble();
+
+	}
+
+	public void inThongTin() {
+		System.out.println("Ma so: " + maSo);
+		System.out.println("Ten: " + ten);
+		System.out.println("CMND: " + cmnd);
+		System.out.print("Dia chi: " + diaChi);
+		System.out.println("Nam kinh nghiem: " + namKinhNghiem);
+		System.out.println("Luong co ban: " + luongcoBan);
 
 	}
 }

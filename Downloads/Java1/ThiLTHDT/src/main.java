@@ -15,7 +15,6 @@ public abstract class main {
                   String nhanvien = sc.nextLine();
                   if (nhanvien.equalsIgnoreCase("Fulltime")) {
                         Employee[i] = new FullTimeEmployee();
-                   
 
                   } else if (nhanvien.equalsIgnoreCase("Parttime")) {
                         Employee[i] = new PartTimeEmployee();
@@ -24,6 +23,10 @@ public abstract class main {
                         i--; // giảm số lượng nhân viên đã nhập về lại trước đó để nhập lại
                   }
                   Employee[i].nhap();
+                  System.out.println("Luong thuc lanh " + Employee[i].luongThucLanh());
+                  if (Employee[i].getNamKinhNghiem() > 3 && Employee[i].luongToiThieu() < 8000000) {
+                        Employee[i].inThongTin();
+                  }
             }
       }
 }

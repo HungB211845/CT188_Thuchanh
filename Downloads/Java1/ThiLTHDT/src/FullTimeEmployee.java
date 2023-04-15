@@ -30,17 +30,16 @@ public class FullTimeEmployee extends Employee {
         return super.toString() + "[" + phuCapChucVu + "," + heSoLuong + "]";
     }
 
-    public double luongToithieu() {
-        return getLuongCoBan() * heSoLuong;
-    }
-
+   
+    @Override
     public double luongThucLanh() {
         return luongToiThieu() + (phuCapChucVu * luongToiThieu()) + getLuongCoBan();
     }
 
     @Override
     public double luongToiThieu() {
+        return getLuongCoBan() * heSoLuong;
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'luongToiThieu'");
+
     }
 }

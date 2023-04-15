@@ -22,7 +22,7 @@ public class PartTimeEmployee extends Employee {
   public int getSoNgayLamViec() {
     return soNgaylamViec;
   }
-
+  @Override
   public double luongThucLanh() {
     return luongToiThieu() + (getLuongCoBan() * getNamKinhNghiem());
   }
